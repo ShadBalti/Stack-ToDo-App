@@ -258,5 +258,43 @@ body {
   stroke-width: 3;
 }
 
-.task input:checked {
+.task input:checked ~ .checkmark {
+  background-color: #5e5a76;
+}
+
+.task input:checked ~ .checkmark img {
+  opacity: 1;
+}
+.task input:checked ~ p {
+  text-decoration: line-through;
+  opacity: 0.6;
+  transform: all 0.5s;
+}
+
+.task-wrapper .delete {
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: #2e2e2e;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.031);
+  opacity: 0.5;
+  /* visibility: hidden; */
+  transition: all 0.3s;
+}
+
+.delete img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.task-wrapper:hover .delete {
+  visibility: visible;
+  opacity: 1;
+}
+
+.task-wrapper .delete:hover {
+  color: red;
+  background-color: rgba(0, 0, 0, 0.1);
 }
