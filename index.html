@@ -88,7 +88,32 @@
           </div>
         </div>
       </div>
+      <!-- Add Todo -->
+<div class="add-todo">
+  <input type="text" id="new-task" placeholder="Add new task" />
+  <button onclick="addTodo()">Add</button>
+</div>
 
+<!-- Edit Todo -->
+<div class="edit-todo">
+  <input type="text" id="edit-task" placeholder="Edit task" />
+  <button onclick="editTodo()">Save</button>
+</div>
+
+<!-- Update the task wrapper -->
+<div class="task-wrapper">
+  <label for="task" class="task">
+    <input type="checkbox" name="" id="task" />
+    <span class="checkmark">
+      <img src="/images/checkmark.svg" alt="" />
+    </span>
+    <p id="task-text">Buy a new car.</p>
+  </label>
+  <div class="buttons">
+    <button onclick="editTask()">Edit</button>
+    <button onclick="deleteTask()">Delete</button>
+  </div>
+</div>
       <!-- tasks screen -->
       <div class="screen category-screen">
         <div class="head-wrapper">
